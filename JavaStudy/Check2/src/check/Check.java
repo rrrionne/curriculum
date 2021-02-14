@@ -3,16 +3,15 @@ package check;
 import constants.Constants;
 
 public class Check {
-	private String firstName = "莉音";
-	private String lastName = "佐々木";
+	private static String firstName = "莉音";
+	private static String lastName = "佐々木";
 
-	private void printName() {
-		System.out.println("printNameメソッド → " + this.lastName + this.firstName);
+	private static void printName(String firstName, String lastName) {
+		System.out.println("printNameメソッド → " + lastName + firstName);
 	}
 
 	public static void main(String[] args) {
-		Check check = new Check();
-		check.printName();
+		printName(firstName, lastName);
 
 		Pet pet = new Pet(Constants.CHECK_CLASS_JAVA, Constants.CHECK_CLASS_HOGE);
 		pet.introduce();
